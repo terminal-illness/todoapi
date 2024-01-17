@@ -1,0 +1,6 @@
+FROM python:3.12
+COPY test/ requirements /
+WORKDIR /
+RUN pip install -r requirements
+EXPOSE 8100
+CMD ["python", "app.py"]

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on darwin)" generated="2024-01-17T23:31:14.193953" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/adriandukhan/Documents/repos/python/todo_api/test/test.robot">
+<test id="s1-t1" name="Get Items" line="14">
+<kw name="Get Items" owner="TestApi">
+<msg time="2024-01-17T23:31:14.324001" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<status status="PASS" start="2024-01-17T23:31:14.240468" elapsed="0.083564"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-01-17T23:31:14.324326" elapsed="0.000549"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-01-17T23:31:14.325290" level="INFO">Length is 4.</msg>
+<arg>${resp.json()}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-01-17T23:31:14.324996" elapsed="0.000319"/>
+</kw>
+<tag>get</tag>
+<status status="PASS" start="2024-01-17T23:31:14.240221" elapsed="0.085196"/>
+</test>
+<status status="PASS" start="2024-01-17T23:31:14.194846" elapsed="0.130824"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">get</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-01-17T23:31:14.192089" level="ERROR">Error in file '/Users/adriandukhan/Documents/repos/python/todo_api/test/test.robot' on line 5: Non-existing setting 'Documentation:'. Did you mean:
+    Documentation</msg>
+<msg time="2024-01-17T23:31:14.239508" level="WARN">Imported library '/Users/adriandukhan/Documents/repos/python/todo_api/test/api_test.py' contains no keywords.</msg>
+</errors>
+</robot>
